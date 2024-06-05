@@ -54,7 +54,7 @@ const ComboSearch = ({ setUsers }) => {
 
   const handleSearch = async () => {
     try {
-      const res = await axios.get('http://localhost:8800/search', {
+      const res = await axios.get('http://4.228.224.171:5000/search', {
         params: { combo, data_agendamento: date }
       });
       setUsers(res.data);

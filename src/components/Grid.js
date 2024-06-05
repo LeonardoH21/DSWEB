@@ -74,7 +74,7 @@ const Grid = ({ users, setUsers, setOnEdit }) => {
     const confirmDelete = window.confirm("Tem certeza que deseja excluir este registro?");
     if (confirmDelete) {
       try {
-        await axios.delete("http://localhost:8800/" + id);
+        await axios.delete("http://4.228.224.171:5000/" + id);
         const newArray = users.filter((user) => user.id !== id);
         setUsers(newArray);
         toast.success("Registro excluído com sucesso.");

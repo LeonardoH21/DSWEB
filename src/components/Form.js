@@ -84,7 +84,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
 
     if (onEdit) {
       await axios
-        .put("http://localhost:8800/" + onEdit.id, {
+        .put("http://4.228.224.171:5000/" + onEdit.id, {
           nome: user.nome.value,
           cpf: user.cpf.value,
           fone: user.fone.value,
@@ -96,7 +96,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
         .catch(({ data }) => toast.error(data));
     } else {
       await axios
-        .post("http://localhost:8800", {
+        .post("http://4.228.224.171:5000/", {
           nome: user.nome.value,
           cpf: user.cpf.value,
           fone: user.fone.value,
@@ -120,7 +120,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
   };
 
   const handleExit = () => {
-    window.location.href = "http://localhost:3000/";
+    window.location.href = "/home";
   };
 
   return (
