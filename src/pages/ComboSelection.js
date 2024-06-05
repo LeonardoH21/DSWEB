@@ -32,7 +32,7 @@ const ComboSelection = () => {
 
   const getUsers = async () => {
     try {
-      const res = await axios.get('http://localhost:8800');
+      const res = await axios.get('http://4.228.224.171:8800');
       setAllUsers(res.data);
     } catch (error) {
       console.error(error);
