@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import ComboSearch from '../components/ComboSearch';
-import Grid from '../components/SimlpleGrid';
+import ProcedimentoSearch from '../components/ProcedimentoSearch';
+import SimpleGrid from '../components/SimpleGrid';
 import axios from 'axios';
 
 const Container = styled.div`
@@ -26,14 +26,14 @@ const GridTitle = styled.h3`
   margin-top: 20px;
 `;
 
-const ComboSelection = () => {
+const ProcedimentoSelection = () => {
   const [users, setUsers] = useState([]);
   const [allUsers, setAllUsers] = useState([]);
 
   const getUsers = async () => {
     try {
       const res = await axios.get('http://4.228.224.171:5000');
-      setAllUsers(res.data);
+      setAllUsers(Array.isArray(res.data) ? res.data : []);
     } catch (error) {
       console.error(error);
     }
@@ -45,14 +45,14 @@ const ComboSelection = () => {
 
   return (
     <Container>
-      <GridTitle>Seleção de Combos</GridTitle>
-      <ComboSearch setUsers={setUsers} />
+      <GridTitle>Seleção de Procedimentos</GridTitle>
+      <ProcedimentoSearch setUsers={setUsers} />
       <GridTitle>Resultados da Pesquisa</GridTitle>
-      <Grid users={users} setUsers={setUsers} setOnEdit={() => {}} />
+      <SimpleGrid users={Array.isArray(users) ? users : []} />
       <GridTitle>Todos os Registros</GridTitle>
-      <Grid users={allUsers} setUsers={setAllUsers} setOnEdit={() => {}} />
+      <SimpleGrid users={Array.isArray(allUsers) ? allUsers : []} />
     </Container>
   );
 };
 
-export default ComboSelection;
+export default ProcedimentoSelection;

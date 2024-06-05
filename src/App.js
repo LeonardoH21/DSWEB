@@ -41,7 +41,7 @@ function App() {
   return (
     <Router>
       <Container>
-        <Title>Comandas do Dia</Title>
+        <Title>Procedimentos</Title>
         <Routes> 
           <Route exact path="/" element={<Form onEdit={onEdit} setOnEdit={setOnEdit} getUsers={getUsers} />} /> 
           

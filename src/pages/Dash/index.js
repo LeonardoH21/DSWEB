@@ -57,10 +57,10 @@ const Dash = () => {
         <Title>DashBoard</Title>
         <ButtonContainer>
           <Button to="/app" style={{ backgroundColor: '#2E8B57', color: 'white' }}>
-            Cadastro de Combos
+            Cadastro de Procedimentos
           </Button>
-          <Button to="/Combo" style={{ backgroundColor: '#90EE90', color: '#333' }}>
-            Seleção de Combos
+          <Button to="/procedimento" style={{ backgroundColor: '#90EE90', color: '#333' }}>
+           Seleção de Procedimentos
           </Button>
         </ButtonContainer>
       </ContentContainer>

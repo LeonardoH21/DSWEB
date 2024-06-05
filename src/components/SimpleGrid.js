@@ -60,7 +60,7 @@ const SimpleGrid = ({ users }) => {
         <Tr>
           <Th>Nome</Th>
           <Th>CPF</Th>
-          <Th>Combo</Th>
+          <Th>Procedimento</Th>
           <Th>Horário</Th>
           <Th>Data</Th>
         </Tr>
@@ -70,7 +70,7 @@ const SimpleGrid = ({ users }) => {
           <Tr key={i}>
             <Td width="22%">{item.nome}</Td>
             <Td width="18%">{item.cpf}</Td>
-            <Td width="18%">{item.combo}</Td>
+            <Td width="18%">{item.procedimento}</Td>
             <Td width="13%">{item.horario}</Td>
             <Td width="20%">{formatDate(item.data_agendamento)}</Td>
           </Tr>

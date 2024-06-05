@@ -48,14 +48,14 @@ const Button = styled.button`
   height: 42px;
 `;
 
-const ComboSearch = ({ setUsers }) => {
-  const [combo, setCombo] = useState('');
+const ProcedimentoSearch = ({ setUsers }) => {
+  const [procedimento, setProcedimento] = useState('');
   const [date, setDate] = useState('');
 
   const handleSearch = async () => {
     try {
       const res = await axios.get('http://4.228.224.171:5000/search', {
-        params: { combo, data_agendamento: date }
+        params: { procedimento, data_agendamento: date }
       });
       setUsers(res.data);
       if (res.data.length === 0) {
@@ -72,8 +72,8 @@ const ComboSearch = ({ setUsers }) => {
   return (
     <SearchContainer>
       <InputArea>
-        <Label>Combo</Label>
-        <Input value={combo} onChange={(e) => setCombo(e.target.value)} />
+        <Label>Procedimento</Label>
+        <Input value={procedimento} onChange={(e) => setProcedimento(e.target.value)} />
       </InputArea>
       <InputArea>
         <Label>Data de Agendamento</Label>
@@ -84,4 +84,4 @@ const ComboSearch = ({ setUsers }) => {
   );
 };
 
-export default ComboSearch;
+export default ProcedimentoSearch;

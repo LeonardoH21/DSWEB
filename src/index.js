@@ -11,7 +11,7 @@ import Login from "./pages/Login";
 import Senha from "./pages/Senha";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import ComboSelection from "./pages/ComboSelection"; 
+import ProcedimentoSelection from "./pages/ProcedimentoSelection"; 
 import Services from "./pages/Services";
 import Dash from "./pages/Dash";
 
@@ -54,10 +54,10 @@ function App() {
     <>
       <GlobalStyle />
       <Container>
-        <Title>Comandas do Dia</Title>
+        <Title>Procedimentos</Title>
         <Routes>
           <Route exact path="/" element={<Form onEdit={onEdit} setOnEdit={setOnEdit} getUsers={getUsers} />} />
-          <Route path="/combo" element={<ComboSelection />} />
+          <Route path="/procedimento" element={<ProcedimentoSelection />} />
         </Routes>
         <Grid setOnEdit={setOnEdit} users={users} setUsers={setUsers} />
         <ToastContainer autoClose={3000} position="bottom-left" />
@@ -74,7 +74,7 @@ ReactDOM.render(
         <Route path="/login" element={<Login />} />
         <Route path="/senha" element={<Senha />} />
         <Route path="/app" element={<App />} />
-        <Route path="/combo" element={<ComboSelection />} />
+        <Route path="/procedimento" element={<ProcedimentoSelection />} />
         <Route path="/services" element={<Services />} />
         <Route path="/dash" element={<Dash />} />
       </Routes>

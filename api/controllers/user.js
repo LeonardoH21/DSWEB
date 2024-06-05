@@ -14,13 +14,13 @@ export const getUsers = (_, res) => {
 
 export const addUser = (req, res) => {
   const q =
-    "INSERT INTO usuarios(`nome`, `cpf`, `fone`, `combo`, `horario`, `data_agendamento`) VALUES(?, ?, ?, ?, ?, ?)";
+    "INSERT INTO usuarios(`nome`, `cpf`, `fone`, `procedimento`, `horario`, `data_agendamento`) VALUES(?, ?, ?, ?, ?, ?)";
 
   const values = [
     req.body.nome,
     req.body.cpf,
     req.body.fone,
-    req.body.combo,
+    req.body.procedimento,
     req.body.horario,
     req.body.data_agendamento,
   ];
@@ -34,13 +34,13 @@ export const addUser = (req, res) => {
 
 export const updateUser = (req, res) => {
   const q =
-    "UPDATE usuarios SET `nome` = ?, `cpf` = ?, `fone` = ?, `combo` = ?, `horario` = ?, `data_agendamento` = ? WHERE `id` = ?";
+    "UPDATE usuarios SET `nome` = ?, `cpf` = ?, `fone` = ?, `procedimento` = ?, `horario` = ?, `data_agendamento` = ? WHERE `id` = ?";
 
   const values = [
     req.body.nome,
     req.body.cpf,
     req.body.fone,
-    req.body.combo,
+    req.body.procedimento,
     req.body.horario,
     req.body.data_agendamento,
   ];
@@ -64,13 +64,13 @@ export const deleteUser = (req, res) => {
 
 // Adicione essa função ao seu arquivo de controllers
 export const searchUsers = (req, res) => {
-  const { combo, data_agendamento } = req.query;
+  const { procedimento, data_agendamento } = req.query;
   let q = "SELECT * FROM usuarios WHERE 1=1";
   const values = [];
 
-  if (combo) {
-    q += " AND combo = ?";
-    values.push(combo);
+  if (procedimento) {
+    q += " AND procedimento = ?";
+    values.push(procedimento);
   }
 
   if (data_agendamento) {
@@ -84,5 +84,3 @@ export const searchUsers = (req, res) => {
     return res.status(200).json(data);
   });
 };
-
-

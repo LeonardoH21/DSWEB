@@ -60,7 +60,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
       user.nome.value = onEdit.nome;
       user.cpf.value = onEdit.cpf;
       user.fone.value = onEdit.fone;
-      user.combo.value = onEdit.combo;
+      user.procedimento.value = onEdit.procedimento;
       user.horario.value = onEdit.horario;
       user.data_agendamento.value = onEdit.data_agendamento;
     }
@@ -75,7 +75,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
       !user.nome.value ||
       !user.cpf.value ||
       !user.fone.value ||
-      !user.combo.value ||
+      !user.procedimento.value ||
       !user.horario.value ||
       !user.data_agendamento.value
     ) {
@@ -88,7 +88,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
           nome: user.nome.value,
           cpf: user.cpf.value,
           fone: user.fone.value,
-          combo: user.combo.value,
+          procedimento: user.procedimento.value,
           horario: user.horario.value,
           data_agendamento: user.data_agendamento.value,
         })
@@ -100,7 +100,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
           nome: user.nome.value,
           cpf: user.cpf.value,
           fone: user.fone.value,
-          combo: user.combo.value,
+          procedimento: user.procedimento.value,
           horario: user.horario.value,
           data_agendamento: user.data_agendamento.value,
         })
@@ -111,7 +111,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
     user.nome.value = "";
     user.cpf.value = "";
     user.fone.value = "";
-    user.combo.value = "";
+    user.procedimento.value = "";
     user.horario.value = "";
     user.data_agendamento.value = "";
 
@@ -120,7 +120,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
   };
 
   const handleExit = () => {
-    window.location.href = "/home";
+    window.location.href = "/";
   };
 
   return (
@@ -138,8 +138,8 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
         <Input name="fone" />
       </InputArea>
       <InputArea>
-        <Label>Combo</Label>
-        <Input name="combo" />
+        <Label>Procedimento</Label>
+        <Input name="procedimento" />
       </InputArea>
       <InputArea>
         <Label>Horário</Label>
