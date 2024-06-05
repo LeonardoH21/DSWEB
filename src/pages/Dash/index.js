@@ -54,7 +54,7 @@ const Dash = () => {
     <DashContainer>
       
       <ContentContainer>
-        <Title>DashBoard</Title>
+        <Title>DashBoard.</Title>
         <ButtonContainer>
           <Button to="/app" style={{ backgroundColor: '#2E8B57', color: 'white' }}>
             Cadastro de Procedimentos
