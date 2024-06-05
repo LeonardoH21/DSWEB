@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 // Importe o vídeo
-import backgroundVideo from './BackgroundVideo.mp4';
+
 
 const DashContainer = styled.div`
   display: flex;
@@ -13,15 +13,7 @@ const DashContainer = styled.div`
   overflow: hidden;
 `;
 
-const VideoBackground = styled.video`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-`;
+
 
 const ContentContainer = styled.div`
   background-color: rgba(255, 255, 255, 0.9); 
@@ -60,10 +52,7 @@ const Button = styled(Link)`
 const Dash = () => {
   return (
     <DashContainer>
-      <VideoBackground autoPlay loop muted>
-        <source src={backgroundVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </VideoBackground>
+      
       <ContentContainer>
         <Title>DashBoard</Title>
         <ButtonContainer>

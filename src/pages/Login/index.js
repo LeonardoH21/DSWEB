@@ -33,7 +33,7 @@ export default function Login() {
           </div>
           <input type='submit' value='Entrar'/>
         </form>
-        <a href='http://localhost:3000/' style={{ color: '#2E8B57' }}>Voltar ao site principal</a>
+        <a href='/' style={{ color: '#2E8B57' }}>Voltar ao site principal</a>
       </div>
     </div>
   );

@@ -12,9 +12,8 @@ import Senha from "./pages/Senha";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ComboSelection from "./pages/ComboSelection"; 
-import Boxes from "./pages/Boxes";
+import Services from "./pages/Services";
 import Dash from "./pages/Dash";
-
 
 const Container = styled.div`
   width: 100%;
@@ -71,13 +70,13 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/senha" element={<Senha />} />
         <Route path="/app" element={<App />} />
         <Route path="/combo" element={<ComboSelection />} />
-        <Route path="/Boxes" element={<Boxes />} />
-        <Route path="/Dash" element={<Dash />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/dash" element={<Dash />} />
       </Routes>
     </Router>
   </React.StrictMode>,

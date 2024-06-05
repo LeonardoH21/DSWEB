@@ -1,36 +1,33 @@
 import './index.scss';
 import { Link } from 'react-router-dom';
-// import logo from '../../assets/images/logo.png';  // Caminho relativo corrigido
 
 export default function Home() {
   return (
-    
     <div className="pagina-home">
       <header className="header">
         <nav className="nav">
-        {/* <img src={logo} alt="Logo" className="header" /> */}
           <Link to="/">Home</Link>
+          <Link to="/Services">Serviços</Link>
           <Link to="/login">Login</Link>
         </nav>
-    <div className="banner">
-      {/* <div className='banner-name'> <h1> Manxys </h1></div> */}
-    <img
-    src="https://s1.1zoom.me/b5050/292/Fields_Sunrises_and_sunsets_Cosmos_plant_527629_1920x1080.jpg"
-    alt="Banner"
-    className="banner-image"
-  />
-</div>
       </header>
 
-      <section className="hero">
+      <div className="banner">
+          <div className="banner-name">MANYX</div>
+          <img
+            src="https://s1.1zoom.me/b5050/292/Fields_Sunrises_and_sunsets_Cosmos_plant_527629_1920x1080.jpg"
+            alt="Banner"
+            className="banner-image"
+          />
+        </div>
+
+
+      <section id="hero" className="hero">
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="title">Unhas Sempre Perfeitas</h1>
-           {/* <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="fonte1"></link>*/}
             <p className="subtitle">
-              Desperte a beleza nas suas mãos. Agende agora sua sessão de manicure e descubra a arte de
-              cuidar das suas unhas. Deixe-nos transformar seus dedos em obras-primas, embelezando sua vida
-              uma unha de cada vez.
+              Desperte a beleza nas suas mãos. Agende agora sua sessão de manicure e descubra a arte de cuidar das suas unhas. Deixe-nos transformar seus dedos em obras-primas, embelezando sua vida uma unha de cada vez.
             </p>
             <h2 className="cta">Ligue para o Agendamento</h2>
           </div>
@@ -42,7 +39,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="info-section">
+      <section id="info" className="info-section">
         <div className="info-content">
           <img
             src="https://www.refinery29.com/images/11498581.jpg?crop=2000%2C1049%2Cx0%2Cy307"
@@ -52,25 +49,22 @@ export default function Home() {
           <div className="info-text">
             <h1>Marque sua sessão e brilhe com estilo incomparável!</h1>
             <p>
-              De segunda a sexta, sua beleza em mãos há de brilhar. Agende agora e deixe seu estilo se destacar.
-              Com cuidado e primor, nossa equipe irá cuidar de cada detalhe para deslumbrar sua beleza.
+              De segunda a sexta, sua beleza em mãos há de brilhar. Agende agora e deixe seu estilo se destacar. Com cuidado e primor, nossa equipe irá cuidar de cada detalhe para deslumbrar sua beleza.
             </p>
             <h2 className="cta">Agende agora</h2>
           </div>
         </div>
-      </section >
+      </section>
 
-      <section className="location-section">
+      <section id="location" className="location-section">
         <div className="location-content">
           <div className="location-text">
             <h1>Localizado na Avenida Paulista</h1>
             <p>
-              Venha descobrir a elegância na Avenida Paulista! Nossa loja de manicure está pronta para transformar
-              suas mãos em obras de arte. Agende sua sessão hoje mesmo e deixe nossos especialistas cuidarem de você
-              com todo o carinho e atenção que merece.
+              Venha descobrir a elegância na Avenida Paulista! Nossa loja de manicure está pronta para transformar suas mãos em obras de arte. Agende sua sessão hoje mesmo e deixe nossos especialistas cuidarem de você com todo o carinho e atenção que merece.
             </p>
             <h2 className="cta3">Encontre-nos!</h2>
-            <h2 className='cta2'> 11 93234245234 </h2>
+            <h2 className='cta2'>11 93234245234</h2>
           </div>
           <img
             src="https://www.melhoresdestinos.com.br/wp-content/uploads/2020/07/avenida-paulista-sao-paulo-capa2019-01.jpg"
@@ -80,7 +74,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="colors-section">
+      <section id="colors" className="colors-section">
         <h1>Aqui nós temos de tudo para você e suas unhas!</h1>
         <div className="color-options">
           <div className="color-item">
@@ -108,13 +102,18 @@ export default function Home() {
             <p>Cuidar das Cutículas</p>
           </div>
         </div>
+        <div className="video-container">
+          <video controls>
+          <source src="/assets/videos/unhas_adv.mp4" type="video/mp4" />
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
+        </div>
       </section>
 
-      <section className="contact-section">
+      <section id="contact" className="contact-section">
         <h1>Fale Conosco</h1>
         <p>
-          Entre em contato com a gente de segunda a sexta, das 9h às 18h. Basta escrever sua mensagem na caixa ao lado
-          e colocar o email de sua preferência para enviar.
+          Entre em contato com a gente de segunda a sexta, das 9h às 18h. Basta escrever sua mensagem na caixa ao lado e colocar o email de sua preferência para enviar.
         </p>
         <form className="contact-form">
           <textarea placeholder="Escreva sua mensagem aqui"></textarea>
